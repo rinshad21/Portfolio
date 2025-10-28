@@ -89,7 +89,7 @@ export default function App() {
                   title="MongoDB"
                 />
                 <SiFirebase
-                  className="hover:text-green-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                   title="Firebase"
                 />
               </div>

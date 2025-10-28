@@ -1,0 +1,30 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  fill="none"
+>
+  <!-- Background glow -->
+  <circle cx="100" cy="100" r="90" fill="url(#grad)" opacity="0.2" />
+  
+  <!-- Laptop base -->
+  <rect x="45" y="70" width="110" height="60" rx="8" fill="#0EA5E9" />
+  
+  <!-- Screen -->
+  <rect x="55" y="80" width="90" height="40" rx="4" fill="white" />
+  
+  <!-- Code lines -->
+  <rect x="65" y="90" width="20" height="4" rx="2" fill="#0EA5E9" />
+  <rect x="65" y="100" width="40" height="4" rx="2" fill="#0EA5E9" />
+  <rect x="65" y="110" width="30" height="4" rx="2" fill="#0EA5E9" />
+  
+  <!-- Keyboard -->
+  <rect x="45" y="135" width="110" height="6" rx="3" fill="#0369A1" />
+  
+  <!-- Glow gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="200" y2="200">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+</svg>

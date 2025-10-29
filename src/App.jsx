@@ -60,36 +60,38 @@ export default function App() {
               </div>
             </div>
             <div className="card text-center p-6 rounded-2xl shadow-md">
-              <h2 className="text-xl font-semibold mb-4">Tech Stack</h2>
+              <h2 className="text-xl font-semibold mb-4 text-cyan-500 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">
+                Tech Stack
+              </h2>
 
               {/* Icons */}
               <div className="flex flex-wrap justify-center gap-4 text-4xl text-slate-700 dark:text-slate-300">
                 <FaReact
-                  className="hover:text-cyan-400 transition-colors"
+                  className="text-cyan-400 hover:scale-110 transition-transform"
                   title="React"
                 />
                 <SiJavascript
-                  className="hover:text-yellow-400 transition-colors"
+                  className="text-yellow-400 hover:scale-110 transition-transform"
                   title="JavaScript"
                 />
                 <SiTailwindcss
-                  className="hover:text-sky-400 transition-colors"
+                  className="text-sky-400 hover:scale-110 transition-transform"
                   title="Tailwind CSS"
                 />
                 <SiExpress
-                  className="hover:text-gray-400 transition-colors"
+                  className="text-gray-400 hover:scale-110 transition-transform"
                   title="Express"
                 />
                 <FaNodeJs
-                  className="hover:text-green-500 transition-colors"
+                  className="text-green-500 hover:scale-110 transition-transform"
                   title="Node.js"
                 />
                 <SiMongodb
-                  className="hover:text-green-400 transition-colors"
+                  className="text-green-400 hover:scale-110 transition-transform"
                   title="MongoDB"
                 />
                 <SiFirebase
-                  className="hover:text-orange-400 transition-colors"
+                  className="text-orange-400 hover:scale-110 transition-transform"
                   title="Firebase"
                 />
               </div>
@@ -98,13 +100,15 @@ export default function App() {
         </section>
 
         <Section id="about" title="About Me">
-          <p className="">
-            I'm a BCA graduate and a full-stack developer Also A big Tech Nerd.
-            Focused on building robust, user-centric applications. I enjoy
-            sipping Cofee at 2am and builiding features end-to-end from
-            designing APIs and structuring databases to crafting responsive,
-            accessible UIs.Looking For a role to grow as a developer and
-            contribute effectively to real-world projects.{" "}
+          <p>
+            I'm a BCA graduate and a full-stack developer also A big Tech Nerd.
+            Focused on building robust, user-centric and scalable web
+            applications. I enjoy sipping Cofee at 2am and builiding features
+            end-to-end from designing APIs and structuring databases to crafting
+            responsive, accessible UIs.I am currently seeking web developer
+            opportunities where I can collaborate with dynamic teams, take on
+            new challenges, and make a meaningful impact. Let’s connect and
+            build something amazing together!{" "}
           </p>
         </Section>
 

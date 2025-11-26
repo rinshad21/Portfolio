@@ -161,7 +161,7 @@ export default function App() {
             <ProjectCard
               title="CaliTrack"
               stack="Mongodb,Express,React,Node.js,cloudinary"
-              description=" CaliTrack is a calisthenics and home-workout tracking application built with a modern MERN architecture. The frontend provides a responsive interface for user authentication, progress tracking, and level-based workout programs."
+              description=" CaliTrack is a calisthenics and home-workout tracking application built with a modern MERN architecture.workouts are fetched based on User level and users can track their progress along with image.Admin can monitor the application by view,add,delete,update workout"
               liveUrl="https://calitrac.vercel.app/"
               codeUrl="https://github.com/rinshad21/CaliTrack-Frontend"
             />

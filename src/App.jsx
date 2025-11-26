@@ -159,6 +159,13 @@ export default function App() {
         <Section id="projects" title="Projects">
           <div className="grid gap-4 md:grid-cols-3">
             <ProjectCard
+              title="CaliTrack"
+              stack="Mongodb,Express,React,Node.js,cloudinary"
+              description=" CaliTrack is a calisthenics and home-workout tracking application built with a modern MERN architecture. The frontend provides a responsive interface for user authentication, progress tracking, and level-based workout programs."
+              liveUrl="https://calitrac.vercel.app/"
+              codeUrl="https://github.com/rinshad21/CaliTrack-Frontend"
+            />
+            <ProjectCard
               title="B-Library"
               stack="Mongodb,Express,React,Node.js,Firebase"
               description=" A Fullstack bookstore E-commerce App  with auth using Firebase, Invoice generation, and admin panel."
@@ -171,13 +178,6 @@ export default function App() {
               description=" MovieBox is a React application that allows users to browse popular movies and manage their personal Watchlist and Favorites using the browser's LocalStorage API. It integrates with The Movie Database (TMDB) API to fetch real-time movie data."
               liveUrl="https://movieboxed.netlify.app/"
               codeUrl="https://github.com/rinshad21/Moviebox"
-            />
-            <ProjectCard
-              title="Productivita"
-              stack="React,Tailwind Css"
-              description=" A productivity Dashboard App Made with React and Tailwind Css"
-              liveUrl="https://productivita.netlify.app/"
-              codeUrl="https://github.com/rinshad21/Productivita"
             />
           </div>
         </Section>

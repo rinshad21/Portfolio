@@ -10,7 +10,10 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiFirebase,
+  SiTypescript,
+  SiGmail,
 } from "react-icons/si";
+import rinshad from "./assets/rinshad.jpeg";
 
 export default function App() {
   const [theme, setTheme] = useState(() =>
@@ -42,6 +45,17 @@ export default function App() {
                 Full‑Stack Developer building scalable and modern web
                 appplications in Mern Stack
               </p>
+              <div className="flex justify-center md:justify-end">
+                <div className="relative w-60 h-60 rounded-full overflow-hidden border-2 border-[#9A7B4F] shadow-2xl mt-2">
+                  <img
+                    src={rinshad}
+                    alt="Portfolio"
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600/20 to-transparent pointer-events-none" />
+                </div>
+              </div>
               <div className="mt-6 flex gap-3">
                 <a href="#projects" className="btn">
                   View Projects
@@ -92,6 +106,10 @@ export default function App() {
                 />
                 <SiFirebase
                   className="text-orange-400 hover:scale-110 transition-transform"
+                  title="Firebase"
+                />
+                <SiTypescript
+                  className="text-[#3178c6] hover:scale-110 transition-transform"
                   title="Firebase"
                 />
               </div>
@@ -186,6 +204,7 @@ export default function App() {
           <p>Have a project or role in mind? Let's Connect.</p>
           <div className="mt-4 flex gap-3">
             <a className="btn" href="mailto:mdrinshadka@gmail.com">
+              <SiGmail />
               Email me
             </a>
             <a

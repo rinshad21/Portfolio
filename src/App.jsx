@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Section from "./components/Section.jsx";
 import ProjectCard from "./components/ProjectCard.jsx";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGitAlt, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
   SiMongodb,
@@ -92,6 +92,7 @@ export default function App() {
                   className="text-sky-400 hover:scale-110 transition-transform"
                   title="Tailwind CSS"
                 />
+
                 <SiExpress
                   className="text-gray-400 hover:scale-110 transition-transform"
                   title="Express"
@@ -103,6 +104,10 @@ export default function App() {
                 <SiMongodb
                   className="text-green-400 hover:scale-110 transition-transform"
                   title="MongoDB"
+                />
+                <FaGitAlt
+                  className="text-orange-600 hover:scale-110 transition-transform"
+                  title="Firebase"
                 />
                 <SiFirebase
                   className="text-orange-400 hover:scale-110 transition-transform"

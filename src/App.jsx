@@ -203,9 +203,9 @@ export default function App() {
         <Section id="contact" title="Contact">
           <p>Have a project or role in mind? Let's Connect.</p>
           <div className="mt-4 flex gap-3">
-            <a className="btn" href="mailto:mdrinshadka@gmail.com">
+            <a className="btn flex gap-2" href="mailto:mdrinshadka@gmail.com">
               <SiGmail />
-              Email me
+              <span>Email me</span>
             </a>
             <a
               className="btn btn-ghost"

@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { RiCodeSSlashFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 export default function Navbar({ theme, onToggle }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80 transition-colors duration-300"
+    >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <a href="#hero" className="font-semibold flex items-center gap-2">
@@ -55,7 +61,7 @@ export default function Navbar({ theme, onToggle }) {
         </div>
       </div>
       {open && (
-        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <div className="absolute top-16 left-0 right-0 md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg">
           <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
             <a href="#about" onClick={() => setOpen(false)}>
               About
@@ -75,6 +81,6 @@ export default function Navbar({ theme, onToggle }) {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }

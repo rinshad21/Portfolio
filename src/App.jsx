@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Section from "./components/Section.jsx";
 import ProjectCard from "./components/ProjectCard.jsx";
-import { FaGitAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGitAlt, FaGithub, FaLinkedin, FaCode, FaServer, FaDatabase } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
   SiMongodb,
@@ -12,8 +12,10 @@ import {
   SiFirebase,
   SiTypescript,
   SiGmail,
+  SiReactrouter,
 } from "react-icons/si";
 import rinshad from "./assets/rinshad.jpeg";
+import { RevealOnScroll } from "./components/RevealOnScroll";
 
 export default function App() {
   const [theme, setTheme] = useState(() =>
@@ -29,7 +31,7 @@ export default function App() {
   }, [theme]);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-black dark:text-slate-100 transition-colors duration-300">
       <Navbar
         theme={theme}
         onToggle={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
@@ -37,30 +39,31 @@ export default function App() {
       <main className="container mx-auto px-4">
         <section id="hero" className="pt-24 pb-16">
           <div className="grid gap-8 md:grid-cols-2 items-center">
+          <RevealOnScroll>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Hi, I'm <span className="text-brand">Rinshad</span>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                Hi, I'm <span className="text-cyan-500 drop-shadow-lg">Rinshad</span>
               </h1>
               <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
                 Full‑Stack Developer building scalable and modern web
                 appplications in Mern Stack
               </p>
               <div className="flex justify-center md:justify-end">
-                <div className="relative w-60 h-60 rounded-full overflow-hidden border-2 border-[#9A7B4F] shadow-2xl mt-2">
+                <div className="relative w-60 h-60 rounded-full overflow-hidden border-4 border-cyan-500/30 shadow-[0_0_20px_rgba(6,182,212,0.5)] mt-8 hover:scale-105 transition-transform duration-300">
                   <img
                     src={rinshad}
                     alt="Portfolio"
                     className="w-full h-full object-cover"
                   />
 
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600/20 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/10 to-transparent pointer-events-none" />
                 </div>
               </div>
-              <div className="mt-6 flex gap-3">
-                <a href="#projects" className="btn">
+              <div className="mt-8 flex gap-4">
+                <a href="#projects" className="btn bg-cyan-500 hover:bg-cyan-600 text-white shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all">
                   View Projects
                 </a>
-                <a href="#contact" className="btn btn-ghost">
+                <a href="#contact" className="btn btn-ghost border-cyan-500/30 hover:bg-cyan-500/10">
                   Get in touch
                 </a>
                 <a
@@ -69,10 +72,11 @@ export default function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FaLinkedin />
+                  <FaLinkedin className="text-2xl text-[#3178c6]" />
                 </a>
               </div>
             </div>
+          </RevealOnScroll>
             <div className="card text-center p-6 rounded-2xl shadow-md">
               <h2 className="text-xl font-semibold mb-4 text-cyan-500 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">
                 Tech Stack
@@ -117,6 +121,10 @@ export default function App() {
                   className="text-[#3178c6] hover:scale-110 transition-transform"
                   title="Firebase"
                 />
+                <SiReactrouter
+                  className="text-red-500 hover:scale-110 transition-transform"
+                  title="React Router"
+                />
               </div>
             </div>
           </div>
@@ -136,27 +144,34 @@ export default function App() {
         </Section>
 
         <Section id="skills" title="Skills">
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="card">
-              <h3 className="font-semibold">Frontend</h3>
-              <ul className="mt-2 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
-                <li>React</li>
-                <li>CSS Modules, Tailwind Css</li>
-              </ul>
-            </div>
-            <div className="card">
-              <h3 className="font-semibold">Backend</h3>
-              <ul className="mt-2 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
-                <li>Node.js (Express)</li>
-                <li>REST API</li>
-              </ul>
-            </div>
-            <div className="card">
-              <h3 className="font-semibold">Data & Infra</h3>
-              <ul className="mt-2 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
-                <li>Sql, MongoDB</li>
-              </ul>
-            </div>
+          <div className="grid gap-6 w-full md:grid-cols-3">
+             {[
+                { 
+                  title: "Frontend", 
+                  skills: ["React", "Tailwind CSS", "Redux"],
+                  icon: <FaCode className="text-4xl mb-2 text-cyan-500" />
+                },
+                { 
+                  title: "Backend", 
+                  skills: ["Node.js (Express)", "REST API"],
+                  icon: <FaServer className="text-4xl mb-2 text-cyan-500" />
+                },
+                { 
+                  title: "Data & Infra", 
+                  skills: ["SQL", "PostgreSQL", "MongoDB"],
+                  icon: <FaDatabase className="text-4xl mb-2 text-cyan-500" />
+                },
+             ].map((category, index) => (
+                <RevealOnScroll key={index} delay={index * 0.2}>
+                  <div className="card hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                    {category.icon}
+                    <h3 className="font-semibold text-lg mb-4 text-white">{category.title}</h3>
+                    <ul className="space-y-2 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
+                      {category.skills.map(skill => <li key={skill}>{skill}</li>)}
+                    </ul>
+                  </div>
+                </RevealOnScroll>
+             ))}
           </div>
         </Section>
         <Section id="experience" title="Experience">
@@ -180,28 +195,34 @@ export default function App() {
           </div>
         </Section>
         <Section id="projects" title="Projects">
-          <div className="grid gap-4 md:grid-cols-3">
-            <ProjectCard
-              title="CaliTrack"
-              stack="Mongodb,Express,React,Node.js,cloudinary"
-              description=" CaliTrack is a calisthenics and home-workout tracking application built with a modern MERN architecture.workouts are fetched based on User level and users can track their progress along with image.Admin can monitor the application by view,add,delete,update workout"
-              liveUrl="https://calitrac.vercel.app/"
-              codeUrl="https://github.com/rinshad21/CaliTrack-Frontend"
-            />
-            <ProjectCard
-              title="B-Library"
-              stack="Mongodb,Express,React,Node.js,Firebase"
-              description=" A Fullstack bookstore E-commerce App  with auth using Firebase, Invoice generation, and admin panel."
-              liveUrl="https://b-library.vercel.app/"
-              codeUrl="https://github.com/rinshad21/B-library-frontend"
-            />
-            <ProjectCard
-              title="MovieBox"
-              stack="React,React Router,Tailwind Css,TmdbApi,shadCn Ui"
-              description=" MovieBox is a React application that allows users to browse popular movies and manage their personal Watchlist and Favorites using the browser's LocalStorage API. It integrates with The Movie Database (TMDB) API to fetch real-time movie data."
-              liveUrl="https://movieboxed.netlify.app/"
-              codeUrl="https://github.com/rinshad21/Moviebox"
-            />
+          <div className="grid gap-6 md:grid-cols-3">
+            <RevealOnScroll delay={0}>
+              <ProjectCard
+                title="CaliTrack"
+                stack="Mongodb,Express,React,Node.js,cloudinary"
+                description=" CaliTrack is a calisthenics and home-workout tracking application built with a modern MERN architecture.workouts are fetched based on User level and users can track their progress along with image.Admin can monitor the application by view,add,delete,update workout"
+                liveUrl="https://calitrac.vercel.app/"
+                codeUrl="https://github.com/rinshad21/CaliTrack-Frontend"
+              />
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.2}>
+              <ProjectCard
+                title="B-Library"
+                stack="Mongodb,Express,React,Node.js,Firebase"
+                description=" A Fullstack bookstore E-commerce App  with auth using Firebase, Invoice generation, and admin panel."
+                liveUrl="https://b-library.vercel.app/"
+                codeUrl="https://github.com/rinshad21/B-library-frontend"
+              />
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.4}>
+              <ProjectCard
+                title="MovieBox"
+                stack="React,React Router,Tailwind Css,TmdbApi,shadCn Ui"
+                description=" MovieBox is a React application that allows users to browse popular movies and manage their personal Watchlist and Favorites using the browser's LocalStorage API. It integrates with The Movie Database (TMDB) API to fetch real-time movie data."
+                liveUrl="https://movieboxed.netlify.app/"
+                codeUrl="https://github.com/rinshad21/Moviebox"
+              />
+            </RevealOnScroll>
           </div>
         </Section>
 

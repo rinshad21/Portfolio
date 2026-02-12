@@ -195,7 +195,7 @@ export default function App() {
           </div>
         </Section>
         <Section id="projects" title="Projects">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             <RevealOnScroll delay={0}>
               <ProjectCard
                 title="CaliTrack"

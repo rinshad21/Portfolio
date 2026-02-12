@@ -1,7 +1,7 @@
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const RevealOnScroll = ({ children, delay = 0, width = "90%" }) => {
+export const RevealOnScroll = ({ children, delay = 0, width = "100%" }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-75px" });
   const mainControls = useAnimation();

@@ -149,17 +149,17 @@ export default function App() {
                 { 
                   title: "Frontend", 
                   skills: ["React", "Tailwind CSS", "Redux"],
-                  icon: <FaCode className="text-4xl mb-2 dark:text-cyan-500" />
+                  icon: <FaCode className="text-4xl mb-2 text-black dark:text-cyan-500" />
                 },
                 { 
                   title: "Backend", 
                   skills: ["Node.js (Express)", "REST API"],
-                  icon: <FaServer className="text-4xl mb-2 dark:text-cyan-500" />
+                  icon: <FaServer className="text-4xl mb-2 text-black dark:text-cyan-500" />
                 },
                 { 
                   title: "Data & Infra", 
                   skills: ["SQL", "PostgreSQL", "MongoDB"],
-                  icon: <FaDatabase className="text-4xl mb-2 dark:text-cyan-500" />
+                  icon: <FaDatabase className="text-4xl mb-2 text-black dark:text-cyan-500" />
                 },
              ].map((category, index) => (
                 <RevealOnScroll key={index} delay={index * 0.2}>

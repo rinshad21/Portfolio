@@ -4,6 +4,7 @@ import Section from "./components/Section.jsx";
 import ProjectCard from "./components/ProjectCard.jsx";
 import { FaGitAlt, FaGithub, FaLinkedin, FaCode, FaServer, FaDatabase } from "react-icons/fa";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/react"
 import {
   SiMongodb,
   SiExpress,
@@ -255,6 +256,7 @@ export default function App() {
       <footer className="py-10 text-center text-sm text-slate-500 dark:text-slate-400">
         © {new Date().getFullYear()} Rinshad KA. All rights reserved.
       </footer>
+      <Analytics/>
     </div>
   );
 }
